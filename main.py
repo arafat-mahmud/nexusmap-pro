@@ -5,10 +5,31 @@ from app.social_post_generator import SocialPostGenerator
 
 def main():
     print("🛠️ Building your professional network...")
+    print("📊 Choose your network source:")
+    print("1. GitHub (Safe & Comprehensive)")
+    print("2. LinkedIn Sample (Demo)")
+    print("3. LinkedIn Official API (Requires setup)")
 
     builder = NetworkBuilder()
-    # Use your GitHub username
-    graph = builder.from_github("sidra3921")  # Changed to your username
+
+    # Configuration - change this to switch between sources
+    network_source = (
+        "github"  # Options: "github", "linkedin_sample", "linkedin_official"
+    )
+    username = "arafat-mahmud"  # Your GitHub username
+
+    if network_source == "github":
+        print(f"🔍 Analyzing GitHub network for: {username}")
+        graph = builder.from_github(username)
+    elif network_source == "linkedin_sample":
+        print("📊 Creating LinkedIn-style sample network...")
+        graph = builder._create_sample_linkedin_network()
+    elif network_source == "linkedin_official":
+        print("🔗 Connecting to LinkedIn Official API...")
+        graph = builder.from_linkedin_official()
+    else:
+        print("⚠️ Unknown source, using GitHub...")
+        graph = builder.from_github(username)
 
     print("🎨 Generating visualizations...")
     html_file = Visualizer.create_interactive(graph)

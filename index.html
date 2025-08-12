@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusMap Pro - Decode Your Professional Network</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1f77b4 0%, #4ecdc4 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .cta-header {
+            background: white;
+            color: #1f77b4;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .cta-header:hover {
+            transform: translateY(-2px);
+        }
+        
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s 0.3s forwards;
+        }
+        
+        .cta-main {
+            display: inline-block;
+            background: white;
+            color: #1f77b4;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s;
+            opacity: 0;
+            animation: fadeInUp 1s 0.6s forwards;
+        }
+        
+        .cta-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .features {
+            background: white;
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .demo {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .demo-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .demo-image {
+            background: #1f77b4;
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .demo-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🌐 NexusMap Pro</div>
+            <a href="app.py" class="cta-header">Launch App</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Decode Your Professional Network</h1>
+            <p>Discover hidden patterns, analyze connections, and generate viral LinkedIn content with the power of data science.</p>
+            <a href="app.py" class="cta-main">🚀 Analyze Your Network Now</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">✨ Powerful Features</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 2rem;">Everything you need to understand and showcase your professional network</p>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🔍</div>
+                    <h3>GitHub Analysis</h3>
+                    <p>Analyze your GitHub followers, following, and collaborators. See your developer network in action.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📊</div>
+                    <h3>Interactive Visualizations</h3>
+                    <p>Beautiful, interactive network graphs with hover details and professional styling.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">💡</div>
+                    <h3>Smart Insights</h3>
+                    <p>Get AI-powered insights about your network density, centrality, and connection patterns.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">🔥</div>
+                    <h3>LinkedIn Posts</h3>
+                    <p>Auto-generate engaging LinkedIn posts with your network analysis results.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Works perfectly on desktop, tablet, and mobile devices. Analyze anywhere.</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📁</div>
+                    <h3>Export Data</h3>
+                    <p>Download your network data as CSV, statistics as JSON, and visualizations as images.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo">
+        <div class="container">
+            <div class="demo-content">
+                <div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">See It In Action</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #666;">Enter your GitHub username and get instant network analysis with professional insights and LinkedIn-ready content.</p>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin: 1rem 0; display: flex; align-items: center;">
+                            <span style="background: #28a745; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem;">✓</span>
+                            Instant network analysis
+                        </li>
+                        <li style="margin: 1rem 0; display: flex; align-items: center;">
+                            <span style="background: #28a745; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem;">✓</span>
+                            Professional visualizations
+                        </li>
+                        <li style="margin: 1rem 0; display: flex; align-items: center;">
+                            <span style="background: #28a745; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem;">✓</span>
+                            LinkedIn post generation
+                        </li>
+                        <li style="margin: 1rem 0; display: flex; align-items: center;">
+                            <span style="background: #28a745; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 1rem;">✓</span>
+                            Downloadable results
+                        </li>
+                    </ul>
+                </div>
+                <div class="demo-image">
+                    📊 Interactive Network Visualization<br>
+                    🌐 Real-time Analysis Dashboard<br>
+                    💡 Smart Insights & Recommendations
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #333; color: white; text-align: center; padding: 2rem 0;">
+        <div class="container">
+            <p>&copy; 2025 NexusMap Pro. Built with ❤️ and data science.</p>
+            <p style="margin-top: 1rem;">
+                <a href="https://github.com/arafat-mahmud/nexusmap-pro" style="color: #4ecdc4; text-decoration: none;">GitHub</a> | 
+                <a href="https://linkedin.com/in/arafat-mahmud" style="color: #4ecdc4; text-decoration: none;">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
