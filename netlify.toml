@@ -1,11 +1,19 @@
 [build]
-  command = "pip install -r requirements.txt && streamlit run app.py"
+  command = "./netlify-build.sh"
   publish = "."
-
+  
 [build.environment]
-  PYTHON_VERSION = "3.8"
+  PYTHON_VERSION = "3.9"
+  NETLIFY_USE_YARN = "false"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
+[[plugins]]
+  package = "./netlify/plugins/streamlit"
 
 [[redirects]]
   from = "/*"
-  to = "/app.py"
+  to = "/.netlify/functions/streamlit"
   status = 200
+  force = true
